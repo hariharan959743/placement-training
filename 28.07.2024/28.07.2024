@@ -1,0 +1,72 @@
+def is_even(num):
+    return num % 2 == 0
+
+number = int(input("Enter a number for even check: "))
+print(f"{number} is even: {is_even(number)}")
+
+
+def sum_of_digits(n):
+    return sum(int(digit) for digit in str(n))
+
+number = int(input("Enter a number for sum of digits: "))
+print(f"Sum of digits: {sum_of_digits(number)}")
+
+
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+num1, num2 = map(int, input("Enter two numbers for GCD: ").split())
+print(f"GCD: {gcd(num1, num2)}")
+
+
+def count_words(s):
+    return len(s.split())
+
+string = input("Enter a string to count words: ")
+print(f"Number of words: {count_words(string)}")
+
+
+def list_average(lst):
+    return sum(lst) / len(lst)
+
+numbers = list(map(int, input("Enter numbers separated by space for average: ").split()))
+print(f"Average: {list_average(numbers)}")
+
+
+def swap(a, b):
+    return b, a
+
+a, b = map(int, input("Enter two numbers to swap: ").split())
+a, b = swap(a, b)
+print(f"Swapped: {a}, {b}")
+
+
+def generate_multiplication_table(n, limit=10):
+    return [n * i for i in range(1, limit + 1)]
+
+number = int(input("Enter a number for multiplication table: "))
+print(generate_multiplication_table(number))
+
+
+def decimal_to_binary(n):
+    return bin(n)[2:]
+
+number = int(input("Enter a number to convert to binary: "))
+print(f"Binary: {decimal_to_binary(number)}")
+
+
+def is_anagram(str1, str2):
+    return sorted(str1) == sorted(str2)
+
+string1 = input("Enter first string for anagram check: ")
+string2 = input("Enter second string for anagram check: ")
+print(f"Anagram: {is_anagram(string1, string2)}")
+
+
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5/9
+
+fahrenheit = float(input("Enter temperature in Fahrenheit to convert to Celsius: "))
+print(f"Temperature in Celsius: {fahrenheit_to_celsius(fahrenheit)}")

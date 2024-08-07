@@ -1,0 +1,12 @@
+def adventure_game():
+    print("Welcome to the Adventure Game!")
+    choice = input("You are in a forest. Do you want to go 'left' or 'right'? ")
+
+    if choice == 'left':
+        print("You encounter a dragon and run away!")
+    elif choice == 'right':
+        print("You find a treasure chest filled with gold!")
+    else:
+        print("Invalid choice. Game over.")
+
+adventure_game()

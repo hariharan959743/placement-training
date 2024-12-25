@@ -1,0 +1,94 @@
+Here are ten high-level Java problems presented as code snippets without comments:
+
+1. Concurrency Issue:
+
+public class Counter {
+    private int count = 0;
+    public void increment() {
+        count++;
+    }
+}
+
+
+2. Memory Leak:
+
+public class MemoryLeak {
+    private static List<Object> list = new ArrayList<>();
+    public void addToList(Object obj) {
+        list.add(obj);
+    }
+}
+
+
+3. SQL Injection Vulnerability:
+
+String query = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
+
+
+4. Unchecked Exception:
+
+public int divide(int a, int b) {
+    return a / b;
+}
+
+
+5. Performance Bottleneck:
+
+for (int i = 0; i < data.size(); i++) {
+    for (int j = 0; j < data.size(); j++) {
+        if (data.get(i).equals(data.get(j))) {
+            // Do something
+        }
+    }
+}
+
+
+6. Improper Dependency Injection:
+
+public class Service {
+    private Repository repository = new Repository();
+}
+
+
+7. Hardcoded Credentials:
+
+String username = "admin";
+String password = "password123";
+
+
+8. Inefficient Data Structure:
+
+List<Integer> list = new LinkedList<>();
+for (int i = 0; i < 10000; i++) {
+    list.add(i);
+}
+
+
+9. Deadlock:
+
+public void method1() {
+    synchronized (lock1) {
+        synchronized (lock2) {
+            // Do something
+        }
+    }
+}
+
+public void method2() {
+    synchronized (lock2) {
+        synchronized (lock1) {
+            // Do something
+        }
+    }
+}
+
+
+10. Unsecure File Handling:
+
+File file = new File("/path/to/file");
+FileInputStream fis = new FileInputStream(file);
+byte[] data = new byte[(int) file.length()];
+fis.read(data);
+
+
+
